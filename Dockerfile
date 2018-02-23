@@ -13,6 +13,7 @@ RUN yarn global add @angular/cli@${ANGULAR_CLI_VERSION} \
                 stylelint-order \
                 stylelint-scss
 
+ENV PATH ${PATH}:/usr/src/angular/node_modules/.bin
 WORKDIR /usr/src/angular
 COPY src /usr/src/angular/src/
 CMD ["exec", "$@"]
